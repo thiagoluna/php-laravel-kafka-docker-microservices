@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa60de60de6a382e42b4f73eb88cf5ad",
+    "content-hash": "6a1ffdcd8ebbd33d59e1ce44f1387d91",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3883,6 +3883,53 @@
                 }
             ],
             "time": "2021-01-20T14:39:46+00:00"
+        },
+        {
+            "name": "wesleywillians/phpeasykafka",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wesleywillians/phpeasykafka.git",
+                "reference": "35dfc74a646a5ae6f57f1a240d589aac90ce3329"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wesleywillians/phpeasykafka/zipball/35dfc74a646a5ae6f57f1a240d589aac90ce3329",
+                "reference": "35dfc74a646a5ae6f57f1a240d589aac90ce3329",
+                "shasum": ""
+            },
+            "require": {
+                "ext-rdkafka": "*",
+                "php": "^7.1",
+                "psr/container": "*"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PHPEasykafka\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Wesley Willians",
+                    "email": "wesleywillians@gmail.com"
+                }
+            ],
+            "description": "Abstraction layer of phprdkafka",
+            "keywords": [
+                "client",
+                "kafka"
+            ],
+            "support": {
+                "issues": "https://github.com/wesleywillians/phpeasykafka/issues",
+                "source": "https://github.com/wesleywillians/phpeasykafka/tree/master"
+            },
+            "time": "2019-10-23T16:19:32+00:00"
         }
     ],
     "packages-dev": [
@@ -6538,7 +6585,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "wesleywillians/phpeasykafka": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

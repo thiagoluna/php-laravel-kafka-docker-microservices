@@ -38,7 +38,10 @@ class Order extends Model
 
     public function delete()
     {
+        //Primeiro executa a deleção de itens
         $this->items()->delete();
+
+        //Caso a deleção acima seja true, executa o Delete Inicial
         return parent::delete();
     }
 }
