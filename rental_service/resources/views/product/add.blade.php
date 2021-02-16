@@ -25,9 +25,9 @@
             <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{URL::asset('/product')}}">Products</a></li>
-                <li><a href="#">Opções</a></li>
-                <li><a href="#">Perfil</a></li>
-                <li><a href="#">Ajuda</a></li>
+                <li><a href="{{URL::asset('/customer')}}">Customers</a></li>
+                <li><a href="{{URL::asset('/order')}}">Orders</a></li>
+                <li><a href="{{URL::asset('/saml2/RENTAL/logout')}}">Logout</a></li>
             </ul>
             </div>
         </div>

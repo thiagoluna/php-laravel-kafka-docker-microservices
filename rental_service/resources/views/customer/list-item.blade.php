@@ -27,7 +27,7 @@
                 <li><a href="{{URL::asset('/product')}}">Products</a></li>
                 <li><a href="{{URL::asset('/customer')}}">Customers</a></li>
                 <li><a href="{{URL::asset('/order')}}">Orders</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="{{URL::asset('/saml2/RENTAL/logout')}}">Logout</a></li>
             </ul>
         </div>
     </div>
@@ -42,7 +42,7 @@
             <p>{{$customer->name}}</p>
         </div>
         <div class="col-md-4">
-            <p><strong>Description</strong></p>
+            <p><strong>Email</strong></p>
             <p>{{$customer->email}}</p>
         </div>
         <div class="col-md-4">

@@ -46,7 +46,7 @@
                 <li><a href="{{URL::asset('/product')}}">Products</a></li>
                 <li><a href="{{URL::asset('/customer')}}">Customers</a></li>
                 <li><a href="{{URL::asset('/order')}}">Orders</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="{{URL::asset('/saml2/RENTAL/logout')}}">Logout</a></li>
             </ul>
         </div>
     </div>
