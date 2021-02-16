@@ -1,10 +1,12 @@
 <?php
 
-Route::get('/', function () {
-    return view('auth.login');
-});
-
 Route::group(['middleware' => ['auth']], function () {
+
+    //Rota pra chamar o Login definido no Middleware Authenticate
+    Route::get('/', function () {
+        return view('CISTOMER');
+    });
+
     //Products
     Route::resource('product', 'ProductController');
     Route::any('busca', 'ProductController@busca');
@@ -19,7 +21,3 @@ Route::group(['middleware' => ['auth']], function () {
         return view('customer.add');
     });
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

@@ -1,10 +1,11 @@
 <?php
 
-Route::get('/', function () {
-    return view('auth.login');
-});
-
 Route::group(['middleware' => ['auth']], function () {
+
+    //Rota pra chamar o Login definido no Middleware Authenticate
+    Route::get('/', function () {
+        return view('product');
+    });
 
     Route::resource('product','ProductController');
 
@@ -15,6 +16,3 @@ Route::group(['middleware' => ['auth']], function () {
     });
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

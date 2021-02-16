@@ -1,23 +1,11 @@
 <?php
 
-Route::get('/', function () {
-    $url='http://localhost:8000/saml2/RENTAL/login';
-    return redirect($url);
-})->name('login');
-
-Route::get('/login', function () {
-    $url='http://localhost:8000/saml2/RENTAL/login';
-    return redirect($url);
-})->name('login');
-
-Route::get('/logout', function () {
-    $url='http://localhost:8000/saml2/RENTAL/logout';
-    return redirect($url);
-})->name('logout');
-
 Route::group(['middleware' => ['auth']], function () {
 
-    Route::get('/', 'OrderController@index');
+    //Rota pra chamar o Login definido no Middleware Authenticate
+    Route::get('/', function () {
+        return view('order');
+    });
 
     //Products
     Route::resource('product','ProductController');
