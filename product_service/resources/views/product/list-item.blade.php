@@ -46,7 +46,7 @@
                 <li><a href="{{URL::asset('/product')}}">Products</a></li>
                 <li><a href="#">Opções</a></li>
                 <li><a href="#">Perfil</a></li>
-                <li><a href="#">Ajuda</a></li>
+                <li><a href="{{URL::asset('/saml2/PRODUCT/logout')}}">Logout</a></li>
             </ul>
             </div>
         </div>
