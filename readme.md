@@ -14,7 +14,7 @@ Project under development...
 - Apache Kafka
 - Mysql
 - Kubernetes
-- Single Sign On
+- Single Sign On - SAMl2 - onelogin.com
 
 # Microservices
 - Customer
