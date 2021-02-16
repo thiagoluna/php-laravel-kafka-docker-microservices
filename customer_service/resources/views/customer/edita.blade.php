@@ -25,9 +25,9 @@
             <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{URL::asset('/product')}}">Products</a></li>
-                <li><a href="#">Opções</a></li>
-                <li><a href="#">Perfil</a></li>
-                <li><a href="#">Ajuda</a></li>
+                <li><a href="{{URL::asset('/customer')}}">Customers</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="{{URL::asset('/saml2/CUSTOMER/logout')}}">Logout</a></li>
             </ul>
             </div>
         </div>
@@ -35,10 +35,10 @@
 
     <!-- Container Principal -->
     <div id="main" class="container-fluid"style="margin-top: 50px">
-        <h3 class="page-header">Edit Product ID {{$product->id}}</h3>
+        <h3 class="page-header">Edit Customer ID {{$customer->id}}</h3>
 
         <!-- Área do Form-->
-        <form method="post" action="{{route('product.update', $product->id)}}">
+        <form method="post" action="{{route('customer.update', $customer->id)}}">
             {!! method_field('put') !!}
             {{ csrf_field() }}
             <!-- area de campos do form -->
@@ -46,29 +46,38 @@
             <div class="row">
                 <div class="form-group col-md-4">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" name="name" placeholder="Enter the Name" value="{{$product->name}}">
+                    <input type="text" class="form-control" name="name" placeholder="Enter the Name" value="{{$customer->name}}">
                 </div>
 
                 <div class="form-group col-md-4">
-                    <label for="email">Description</label>
-                    <input type="text" class="form-control" name="description" placeholder="Enter the Description" value="{{$product->description}}">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" name="email" placeholder="Enter the email" value="{{$customer->email}}">
                 </div>
 
                 <div class="form-group col-md-4">
-                    <label for="senha">Price</label>
-                    <input type="text" class="form-control" name="price" placeholder="Enter the Price" value="{{$product->price}}">
+                    <label for="phone">Phone</label>
+                    <input type="text" class="form-control" name="phone" placeholder="Enter the phone" value="{{$customer->phone}}">
                 </div>
             </div>
             <!-- 4 campos por linha -->
             <div class="row">
                     <div class="form-group col-md-3">
-                        <label for="endereco">Quantity Available</label>
-                        <input type="text" class="form-control" name="qtd_available" placeholder="Enter the Quantity Available" value="{{$product->qtd_available}}">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" name="address" placeholder="Enter the address" value="{{$customer->address}}">
                     </div>
 
                     <div class="form-group col-md-3">
-                        <label for="bairro">Quantity Total</label>
-                        <input type="text" class="form-control" name="qtd_total" placeholder="Enter the Quantity Total" value="{{$product->qtd_total}}">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" name="city" placeholder="Enter the city" value="{{$customer->city}}">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="state">State</label>
+                        <input type="text" class="form-control" name="state" placeholder="Enter the state" value="{{$customer->state}}">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="bairro">Zipcode</label>
+                        <input type="text" class="form-control" name="zipcode" placeholder="Enter the zipcode" value="{{$customer->zipcode}}">
                     </div>
                 </div>
             <hr />
@@ -76,7 +85,7 @@
                 <!-- Div col-md-12 ocupa toda largura no grid -->
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-primary">Save</button>
-                    <a href="{{URL::asset('/product')}}" class="btn btn-default">Cancel</a>
+                    <a href="{{URL::asset('/customer')}}" class="btn btn-default">Cancel</a>
                 </div>
             </div>
         </form>

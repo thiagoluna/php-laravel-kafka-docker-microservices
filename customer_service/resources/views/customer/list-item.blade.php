@@ -46,7 +46,7 @@
                 <li><a href="{{URL::asset('/product')}}">Products</a></li>
                 <li><a href="{{URL::asset('/customer')}}">Customers</a></li>
                 <li><a href="#">Orders</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="{{URL::asset('/saml2/CUSTOMER/logout')}}">Logout</a></li>
             </ul>
         </div>
     </div>
@@ -57,31 +57,31 @@
     <h3 class="page-header">View Customer {{$customer->name}}</h3>
     <div class="row">
         <div class="col-md-4">
-            <p><strong>Nome</strong></p>
+            <p><strong>Name</strong></p>
             <p>{{$customer->name}}</p>
         </div>
         <div class="col-md-4">
-            <p><strong>Description</strong></p>
+            <p><strong>Email</strong></p>
             <p>{{$customer->email}}</p>
         </div>
         <div class="col-md-4">
-            <p><strong>Price</strong></p>
+            <p><strong>Phone</strong></p>
             <p>{{$customer->phone}}</p>
         </div>
         <div class="col-md-3">
-            <p><strong>Quantity Available</strong></p>
+            <p><strong>Address</strong></p>
             <p>{{$customer->address}}</p>
         </div>
         <div class="col-md-3">
-            <p><strong>Quantity Total</strong></p>
+            <p><strong>City</strong></p>
             <p>{{$customer->city}}</p>
         </div>
         <div class="col-md-3">
-            <p><strong>Quantity Available</strong></p>
+            <p><strong>State</strong></p>
             <p>{{$customer->state}}</p>
         </div>
         <div class="col-md-3">
-            <p><strong>Quantity Total</strong></p>
+            <p><strong>Zipcode</strong></p>
             <p>{{$customer->zipcode}}</p>
         </div>
     </div>

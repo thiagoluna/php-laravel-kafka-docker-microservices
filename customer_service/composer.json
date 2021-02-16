@@ -9,9 +9,11 @@
     "license": "MIT",
     "require": {
         "php": "^7.2.5|^8.0",
+        "aacotroneo/laravel-saml2": "^2.1",
         "fideloper/proxy": "^4.4",
         "laravel/framework": "^6.20",
         "laravel/tinker": "^2.5",
+        "laravel/ui": "^1.0",
         "wesleywillians/phpeasykafka": "dev-master"
     },
     "require-dev": {
