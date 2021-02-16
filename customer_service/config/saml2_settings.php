@@ -42,7 +42,7 @@ return $settings = array(
     /**
      * Where to redirect after logout
      */
-    'logoutRoute' => '/',
+    'logoutRoute' => '/saml2/CUSTOMER/login',
 
     /**
      * Where to redirect after login if no other option was provided
