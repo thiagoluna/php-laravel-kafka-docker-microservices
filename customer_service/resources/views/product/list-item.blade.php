@@ -81,14 +81,6 @@
         <!-- Botões -->
         <div id="actions" class="row">
             <div class="col-md-12">
-                <a href="{{route('product.edit', $product->id)}}" class="btn btn-primary">Editar</a>
-                <form style="display: inline-block;" method="POST" action="{{route('product.destroy', $product->id)}}"
-                    data-toggle="tooltip" data-placement="top" title="Excluir" onsubmit="return confirm('Confirm?')">
-                        {{method_field('DELETE')}}{{ csrf_field() }}
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
-                <!-- link ativar o modal e exibir a div#delete-modal
-                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal">Excluir</a> -->
                 <a href="{{URL::asset('/product')}}" class="btn btn-default">Close</a>
             </div>
         </div>

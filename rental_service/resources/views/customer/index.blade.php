@@ -75,7 +75,7 @@
             </div>
             <!-- Botão Novo -->
             <div class="col-md-3">
-                <a href="{{URL::asset('add-customer/')}}" class="btn btn-primary pull-right h2">Add Nem Customer</a>
+                <!--a href="#" class="btn btn-primary pull-right h2">Add Nem Customer</a>-->
             </div>
         </div> <!-- /#top -->
         <hr />
@@ -110,12 +110,6 @@
                             <td>{{$customer->phone}}</td>
                             <td class="actions">
                                 <a class="btn btn-success btn-xs" href="{{route('customer.show', $customer->id)}}">View</a>
-                                <a class="btn btn-warning btn-xs" href="{{route('customer.edit', $customer->id)}}">Edit</a>
-                                <form style="display: inline-block;" method="POST" action="{{route('customer.destroy', $customer->id)}}"
-                                    data-toggle="tooltip" data-placement="top" title="Excluir" onsubmit="return confirm('Confirm delete?')">
-                                        {{method_field('DELETE')}}{{ csrf_field() }}
-                                        <button type="submit" class="btn btn-danger btn-xs">Delete</button>
-                                </form>
                             </td>
                         </tr>
                         @endforeach

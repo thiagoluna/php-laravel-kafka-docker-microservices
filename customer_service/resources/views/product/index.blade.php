@@ -110,12 +110,6 @@
                             <td>{{$product->qtd_available}}</td>
                             <td class="actions">
                                 <a class="btn btn-success btn-xs" href="{{route('product.show', $product->id)}}">View</a>
-                                <a class="btn btn-warning btn-xs" href="{{route('product.edit', $product->id)}}">Edit</a>
-                                <form style="display: inline-block;" method="POST" action="{{route('product.destroy', $product->id)}}"
-                                    data-toggle="tooltip" data-placement="top" title="Excluir" onsubmit="return confirm('Confirm delete?')">
-                                        {{method_field('DELETE')}}{{ csrf_field() }}
-                                        <button type="submit" class="btn btn-danger btn-xs">Delete</button>
-                                </form>
                             </td>
                         </tr>
                         @endforeach
