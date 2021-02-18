@@ -2,7 +2,9 @@
 FROM php:7.3.13-fpm-alpine3.9
 
 # Apk é o instalador do Alpine
-RUN apk add --no-cache openssl bash mysql-client nodejs npm alpine-sdk autoconf librdkafka-dev nano
+RUN apk add --no-cache openssl bash mysql-client nodejs npm alpine-sdk autoconf librdkafka-dev vim nginx openrc
+RUN mkdir -p /run/nginx && \
+    echo "pid /run/nginx.pid;" >> /etc/nginx/nginx.conf
 
 # docker-php-ext-install permite instalar extensões do PHP
 RUN docker-php-ext-install pdo pdo_mysql bcmath
@@ -21,7 +23,11 @@ RUN ln -s public html
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-EXPOSE 9000
+RUN rm /etc/nginx/conf.d/default.conf
+COPY .docker/nginx/nginx.conf /etc/nginx/conf.d
+COPY . .
+RUN chmod -R 777 /var/www/storage/
+RUN chmod -R 777 /var/www/entrypoint.sh
 
-# Processo principal que o container vai rodar depois de rodar todos os comandos acima
-ENTRYPOINT [ "php-fpm" ]
+EXPOSE 80
+ENTRYPOINT [ "/var/www/entrypoint.sh" ]

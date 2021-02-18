@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: product-app
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: jornada-product
-        image: wesleywillians/product_jornada:latest
+        image: thiagoluna/product_jornada
         imagePullPolicy: Always
 #        command: ["/bin/sh", "-c", "ln -s /var/www /usr/share/nginx;  php-fpm;"]
         ports:
